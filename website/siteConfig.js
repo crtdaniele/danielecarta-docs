@@ -23,11 +23,11 @@ const users = [
 const siteConfig = {
   title: 'Daniele Carta\'s Docs', // Title for your website.
   tagline: 'A website for testing',
-  url: 'https://www.danielecarta.site', // Your website URL
   baseUrl: '/', // Base URL for your project */
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
+  url: 'https://crtdaniele.github.io', // Replace USERNAME with your GitHub username.
+  baseUrl: '/danielecarta-docs/', // The name of your GitHub project.
+  projectName: 'danielecarta-docs',  // The name of your GitHub project. Same as above.
+  organizationName: 'crtdaniele',
 
   // Used for publishing and more
   projectName: 'danielecarta-docs',
