@@ -20,4 +20,4 @@ jobs:
           heroku_api_key: 6eb8dd7a-5400-4d53-ad1a-9eb5fffaaaa7
           heroku_app_name: "danielecarta-docs" #Must be unique in Heroku
           heroku_email: "crtdaniele@gmail.com"
-          procfile: "web: cd website"  
+          run: "cd website && npm install && npm run build"  
