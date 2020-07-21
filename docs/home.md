@@ -4,7 +4,7 @@ title: Daniele Carta's Docs
 sidebar_label: Introduzione
 ---
 
-Benvenuto sulla mia libreria personale..
+Benvenuto sulla mia libreria personale.
 
 ## Chi sono
 
