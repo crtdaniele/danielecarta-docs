@@ -1,0 +1,7 @@
+{
+  "docs": {
+    "Home": ["home"],
+    "ReactJS": ["reactjs"],
+    "Redux": ["redux"]
+  }
+}
