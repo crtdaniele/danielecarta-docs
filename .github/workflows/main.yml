@@ -10,9 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: oleksiyrudenko/gha-git-credentials@v1
+        with:
+          name: 'Daniele Carta'
+          email: 'crtdaniele@gmail.com'
+          token: '27e81d3f6466d23d64619c01ff5e851c76753792'  
       - uses: akhileshns/heroku-deploy@v3.2.6 # This is the action
         with:
           heroku_api_key: 6eb8dd7a-5400-4d53-ad1a-9eb5fffaaaa7
           heroku_app_name: "danielecarta-docs" #Must be unique in Heroku
           heroku_email: "crtdaniele@gmail.com"
-          procfile: "web: cd website"  
+          run: "cd website && npm install && npm run build"  
