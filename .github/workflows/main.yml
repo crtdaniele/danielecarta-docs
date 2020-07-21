@@ -14,6 +14,7 @@ jobs:
         with:
           name: 'Daniele Carta'
           email: 'crtdaniele@gmail.com'
+          token: '27e81d3f6466d23d64619c01ff5e851c76753792'  
       - uses: akhileshns/heroku-deploy@v3.2.6 # This is the action
         with:
           heroku_api_key: 6eb8dd7a-5400-4d53-ad1a-9eb5fffaaaa7
