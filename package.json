@@ -2,5 +2,8 @@
     "scripts": {
       "heroku-prebuild": "cd website && npm install && npm run build",
       "start": "cd website && npm start"
+    },
+    "engines": {
+      "node": "12.16"
     }
 }
