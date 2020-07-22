@@ -23,8 +23,6 @@ const users = [
 const siteConfig = {
   title: 'Daniele Carta\'s Docs', // Title for your website.
   tagline: 'A website for testing',
-  baseUrl: '/docs/home/', // Base URL for your project */
-  url: 'https://danielecarta-docs.netlify.app',
   // Used for publishing and more
   projectName: 'danielecarta-docs', 
   organizationName: 'Daniele Carta',
