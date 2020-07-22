@@ -26,7 +26,7 @@ const siteConfig = {
   baseUrl: '/docs/home/', // Base URL for your project */
   url: 'https://danielecarta-docs.netlify.app',
   // Used for publishing and more
-  projectName: 'danielecarta-docs',
+  projectName: 'danielecarta-docs', 
   organizationName: 'Daniele Carta',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
