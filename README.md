@@ -1,6 +1,6 @@
 <h1>My personal documentation</h1>
 
-Thanks to Docusaurus
+I created this project to save comments and pieces of code. Very thanks to Docusaurus.
 
 <hr />
 
