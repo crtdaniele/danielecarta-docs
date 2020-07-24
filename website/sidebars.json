@@ -2,6 +2,7 @@
   "docs": {
     "Home": ["home"],
     "ReactJS": ["reactjs"],
-    "Redux": ["redux"]
+    "Redux": ["redux"],
+    "Typescript": ["typescript", "typescript-type"]
   }
 }
