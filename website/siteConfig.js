@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Daniele Carta\'s Docs', // Title for your website.
+  title: 'Daniele Carta', // Title for your website.
   tagline: 'A website for testing',
   baseUrl: '/', // Base URL for your project */
   url: 'https://danielecarta-docs.netlify.app',
@@ -34,7 +34,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {page: 'contact-me', label: 'Contact me'}
+    {page: 'contact-me', label: 'Contattami'}
   ],
 
   // If you have users set above, you add it here:

@@ -1,8 +1,8 @@
 {
   "docs": {
     "Home": ["home"],
-    "ReactJS": ["reactjs"],
+    "ReactJS": ["reactjs", "reactjs-v17"],
     "Redux": ["redux"],
-    "Typescript": ["typescript", "typescript-type"]
+    "Typescript": ["typescript", "typescript-tipi", "typescript-type"]
   }
 }
