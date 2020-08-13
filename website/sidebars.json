@@ -3,6 +3,6 @@
     "Home": ["home"],
     "ReactJS": ["reactjs", "reactjs-v17"],
     "Redux": ["redux"],
-    "Typescript": ["typescript", "typescript-tipi", "typescript-type"]
+    "Typescript": ["typescript", "typescript-tipi", "typescript-type", "typescript-reactjs"]
   }
 }
