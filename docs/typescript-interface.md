@@ -46,7 +46,7 @@ const myUser: User = {email: crtdaniele@gmail.com};
 myUser.email = "nuovaemail@prova.it";
 ```
 
-## Proprietà variabili
+## Operatore |
 
 Come potrai notare negli esempi precedenti, abbiamo sempre definito di determinato tipo di dato nelle varie proprietà.
 Ad esempio la proprietà email era di tipo string, e così via.
@@ -60,3 +60,24 @@ interface User {
 
 Mettiamo caso che il valore di "age" arrivi da una chiamata API e non sappiamo di preciso se il dato arriverà in formato numero o stringa.
 In questo modo potremo assegnare entrambi i tipi nella proprietà age.
+
+## Proprietà variabili
+
+Alziamo ancora di un po l'asticella.
+Mettiamo ora caso che stiamo utilizzando un'API (sempre esterna al nostro progetto) che ha dei dati molto variabili e quindi per noi è molto difficile andare a definire un'interfaccia.
+
+Facciamo un esempio:
+
+```ts
+interface User {
+  nome: string,
+  age: number,
+  [props: string]: any
+}
+```
+
+In questo esempio, ho creato un Interface chiamata User che avrà due proprietà nome ed age (perché siamo sicuri di avere sempre questi due dati) e una terza proprietà definita in questo modo:
+
+```ts
+[props: string]: any
+```
