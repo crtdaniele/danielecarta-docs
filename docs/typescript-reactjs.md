@@ -7,9 +7,6 @@ title: Typescript in ReactJS
 
 Esempio molto semplice per definire le Props di un functional component con Type
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
-
 ```js
 import React from 'react'; // we need this to make JSX compile
 
@@ -28,14 +25,9 @@ export const Card = ({ title, paragraph }: CardProps) => <aside>
 const el = <Card title="Welcome!" paragraph="To this example" />
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 In questa parte { title, paragraph }: CardProps viene utilizzato il destructuring per estrarre le proprietà di CardProps e accedere direttamente alle proprietà senza dover scrivere CardProps.title.
 
 Invece in questo esempio di Type andremo a difinire delle proprietà non obbligatorie
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 type CardProps = {
@@ -44,14 +36,9 @@ type CardProps = {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 Quindi in questo caso, utilizzato l'optional chaining andremo a difinire opzionale la proprietà paragraph.
 
 Un altro esempio
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 import React, { FunctionComponent } from 'react'; // importing FunctionComponent
@@ -71,27 +58,17 @@ export const Card: FunctionComponent<CardProps> = ({ title, paragraph }) => <asi
 const el = <Card title="Welcome!" paragraph="To this example" />
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 In questo esempio andremo a definire che Card è un FunctionComponent a cui viene passato il Type CardProps.
 
 I due esempi sono praticamente uguali, con la differenza che nel secondo esempio posso portare in modo opzionale anche la proprietà children in questo modo:
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 { title, paragraph, children } 
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Children
 
 Come accedere ai componenti children con i FunctionComponent
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 import React, { FunctionComponent } from 'react';
@@ -111,12 +88,7 @@ export const Card: FunctionComponent<CardProps> = ({ title, paragraph, children 
 </aside>
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 Come detto in precedenza, in questo esempio stiamo utilizzando il destructuring, senza il destructuring dovremmo passare l'oggetto Props in questo modo:
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 import React, { FunctionComponent } from 'react';
@@ -138,14 +110,9 @@ export const Card: FunctionComponent<CardProps> = (props) => <aside>
 </aside>
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Eventi
 
 Utilizzando Typescript in ReacJS bisogna tipizzare correttamente anche gli eventi. Di seguito un evento base per definire un onClick
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 import React, { Component, MouseEvent } from 'react';
@@ -164,14 +131,9 @@ export class Button extends Component {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 Altri eventi disponibili: AnimationEvent, ChangeEvent, ClipboardEvent, CompositionEvent, DragEvent, FocusEvent, FormEvent, KeyboardEvent, MouseEvent, PointerEvent, TouchEvent, TransitionEvent, WheelEvent.
 
 Oltre a MouseEvent, è possibile anche andare a specificare il tipo di elemento quindi è possibile limitare ulteriormente la tipizzazione. Vediamo qualche esempio
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 import React, { Component, MouseEvent } from 'react';
@@ -203,8 +165,6 @@ export class Button extends Component {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 Per quanto riguarda onInput, per il momento bisogna utilizzare SyntheticEvent.
 
 ## Hooks
@@ -212,9 +172,6 @@ Per quanto riguarda onInput, per il momento bisogna utilizzare SyntheticEvent.
 ### useState
 
 In questo esempio, useState prende come valore iniziale initial, in questo modo setClicks potrà accettare solo number.
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 // import useState next to FunctionComponent
@@ -234,14 +191,9 @@ const Counter:FunctionComponent<{ initial?: number }> = ({ initial = 0 }) => {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ### useRef
 
 In questo esempio stiamo definendo che inputEl sarà un HTMLInputElement inizializzato a null.
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 function TextInputWithFocusButton() {
@@ -265,14 +217,9 @@ function TextInputWithFocusButton() {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ### useReducer
 
 Nel seguente esempio stiamo creando un Type chiamato ActionType che può accettare una stringa con uno di quei 3 valori.
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 type ActionType = {
@@ -312,15 +259,10 @@ function Counter({ initialCount = 0 }) {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Context
 
 Per utilizzare i Context, la prima cosa da fare è andare a Creare un nuovo Context.
 In questo caso abbiamo definito 3 proprietà, la prima boolean e le altre 2 di <a href="https://danielecarta-docs.netlify.app/docs/typescript-tipi#string">tipo string</a>.
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 import React from 'react';
@@ -332,12 +274,7 @@ export const AppContext = React.createContext({
 });
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 Fai molta attenzione a una cosa, quando vai a utilizzare il Context, dovrai per forza utilizzare tutte le proprietà, in quanto riceverai un'errore di compilazione facendo questo:
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 const App = () => {
@@ -350,12 +287,7 @@ const App = () => {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 Non preoccuparti, c'è anche il modo di andare a utilizzare solo le proprietà di cui hai bisogno utilizzando l'helper <a href="https://danielecarta-docs.netlify.app/docs/typescript-type#partial">Partial</a>:
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 
@@ -396,8 +328,6 @@ const App = () => {
 }
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Style e CSS
 
 Ti consiglio di guardarti questo pacchetto: <a target="_blank" href="https://www.npmjs.com/package/csstype">CSSType</a>.
@@ -405,9 +335,6 @@ Ti consiglio di guardarti questo pacchetto: <a target="_blank" href="https://www
 ### Stile in linea
 
 Per definire lo stile in linea, vediamo subito un esempio:
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 import CSS from 'csstype';
@@ -424,22 +351,18 @@ const h1Styles: CSS.Properties = {
 };
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 Come avrai notato, abbiamo importato il pacchetto csstype.
+Funzionano molto bene anche i suggerimenti.
+
+<img src="https://danielecarta-docs.netlify.app/img/autocompletion-on-properties.png" />
 
 Per applicare il tuo stile in linea:
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Typescript-->
 
 ```js
 export function Heading({ title } : { title: string} ) {
   return <h1 style={h1Styles}>{title}</h1>;
 }
 ```
-
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 ### Styled Components
 
