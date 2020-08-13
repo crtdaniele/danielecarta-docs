@@ -45,3 +45,18 @@ const myUser: User = {email: crtdaniele@gmail.com};
 // questo genererà un errore in quanto email non può esser valorizzata solo quando l'oggetto viene creato
 myUser.email = "nuovaemail@prova.it";
 ```
+
+## Proprietà variabili
+
+Come potrai notare negli esempi precedenti, abbiamo sempre definito di determinato tipo di dato nelle varie proprietà.
+Ad esempio la proprietà email era di tipo string, e così via.
+Con l'operatore | possiamo andare a definire più di un tipo di dato:
+
+```ts
+interface User {
+  age: number | string
+}
+```
+
+Mettiamo caso che il valore di "age" arrivi da una chiamata API e non sappiamo di preciso se il dato arriverà in formato numero o stringa.
+In questo modo potremo assegnare entrambi i tipi nella proprietà age.
