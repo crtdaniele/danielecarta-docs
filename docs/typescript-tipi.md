@@ -133,3 +133,27 @@ function log(message: string): string {
 ## Never
 
 Il tipo never invece viene utilizzato per le funzioni che non restitusciono mai un valore quindi per funzioni che non vengono mai portate a termine (ad esempio una funzione che lancia un ciclio infinito).
+
+Vediamo qualche esempio:
+
+```js
+function lanciaErrore(messaggio: string): never {
+    throw new Error(messaggio);
+}
+
+function loopInfinito(): never {
+  while (true) {}
+}
+```
+
+## Any
+
+Il tipo Any (l'ultimo che vediamo) viene utilizzato quando non sappiamo il tipo di dato a priori (ad esempio, un dato che arriva da un'API esterna che non possiamo controllare e quindi non abbiamo la certezza del tipo di dato che ci arriverà).
+
+Inoltre, quando non andiamo a specificare il tipo di dato, Typescript andrà in automatico a settare il tipo Any. Esempio:
+
+```js
+function log(messaggio): void { 
+  console.log(messaggio);
+}
+```
