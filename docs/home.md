@@ -1,10 +1,10 @@
 ---
 id: home
-title: Appunti di uno Sviluppatore Frontend
+title: Appunti di uno Sviluppatore Frontend 💻
 sidebar_label: Chi sono
 ---
 
-Ciao! Sono Daniele, vivo tra Lugano e Milano e sono un Frontend Developer per passione. Mi piace sviluppare in ReactJS, Redux, Typescript, NodeJS, Javascript ES6 e tutto il mondo che circonda queste tecnologie.
+Ciao! Sono Daniele, vivo tra Lugano e Milano e sono un Frontend Developer per passione. Mi piace sviluppare in ReactJS, Redux, Typescript, NodeJS, Javascript ES6 e tutto il mondo che circonda queste tecnologie. 🚀
 
 Sono anche un appassionato di PWA.
 
