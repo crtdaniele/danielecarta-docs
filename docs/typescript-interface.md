@@ -94,3 +94,22 @@ const myUser: User = {
 ```
 
 Come puoi notare, l'oggetto myUser ha delle proprietà nuove tipo email e cognome che non sono definite all'interno dell'interfaccia User.
+
+## Interface e Funzioni
+
+Oltre a tutto quello che abbiamo visto, è possibile anche definire Interface per le funzioni.
+Vediamo come definire i parametri in ingresso e in output di una funzione:
+
+```ts
+interface IOperatione {
+    (numero: number): number
+}
+
+let Age = 12;
+const LaMiaOperazione: IOperatione = (Age) => {
+    return Age * 2
+}
+```
+
+In questo esempio, stiamo creando una funzione "LaMiaOperazione" che prende in input un numero "Age" e dovrà per forza ritornare sempre un numero.
+Il valore di return viene definito da :number dopo (numero: number).
