@@ -113,3 +113,29 @@ const LaMiaOperazione: IOperatione = (Age) => {
 
 In questo esempio, stiamo creando una funzione "LaMiaOperazione" che prende in input un numero "Age" e dovrà per forza ritornare sempre un numero.
 Il valore di return viene definito da :number dopo (numero: number).
+
+## Extends
+
+Nell'esempio proprietà variabili abbiamo visto come poter estendere un interfaccia con qualsiasi altra proprietà. Questa cosa non è sicura al 100%, perché rischiamo di non sapere con precisione quali dati riceveremo.
+
+Un metodo più sicuro è quello di utilizzare extends.
+
+interface IPerson {
+    name: string;
+    gender: string;
+}
+
+interface IEmployee extends IPerson {
+    empCode: number;
+}
+
+let empObj:IEmployee = {
+    empCode:1,
+    name:"Bill",
+    gender:"Male"
+}
+
+In questo esempio, l'interfaccia IEmployee avrà una sola proprietà "empCode" oltre però a tutte le proprietà di IPerson.
+Quindi possiamo dire che IEmployee è una versione estesa di IPerson.
+
+Nulla ci viene all'interno del nostro codice di utilizzare IPerson oppure IEmployee, utilizzeremo una delle due in base alle nostre necessità.
