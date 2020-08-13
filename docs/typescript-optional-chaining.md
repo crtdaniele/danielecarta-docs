@@ -41,7 +41,7 @@ if (bigObject &&
 }
 ```
 
-Con Typescript abbiamo a disposizione l'operatore ? (optional chaining) che ci semplifica la vita in situazioni con oggetti molto profondi:
+Con Typescript abbiamo a disposizione l'operatore ? (optional chaining) che ci semplifica la vita in situazioni con oggetti molto profondi, vediamo un altro esempio più semplice:
 
 ```js
 let ListaAuto = [{
