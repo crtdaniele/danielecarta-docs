@@ -85,7 +85,12 @@ In questo esempio, ho creato un Interface chiamata User che avrà due proprietà
 Questo ci permettà di andare a dichiarare degli oggetti di questo tipo:
 
 ```ts
-const myUser = {
-  nome: ""
+const myUser: User = {
+  nome: "Daniele",
+  age: 12,
+  email: "crtdaniele@gmail.com",
+  cognome: "Carta"
 };
 ```
+
+Come puoi notare, l'oggetto myUser ha delle proprietà nuove tipo email e cognome che non sono definite all'interno dell'interfaccia User.
