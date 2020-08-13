@@ -313,3 +313,87 @@ function Counter({ initialCount = 0 }) {
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+## Context
+
+Per utilizzare i Context, la prima cosa da fare è andare a Creare un nuovo Context.
+In questo caso abbiamo definito 3 proprietà, la prima boolean e le altre 2 di <a href="https://danielecarta-docs.netlify.app/docs/typescript-tipi#string">tipo string</a>.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Typescript-->
+
+```js
+import React from 'react';
+
+export const AppContext = React.createContext({ 
+  authenticated: true,
+  lang: 'en',
+  theme: 'dark'
+});
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+Fai molta attenzione a una cosa, quando vai a utilizzare il Context, dovrai per forza utilizzare tutte le proprietà, in quanto riceverai un'errore di compilazione facendo questo:
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Typescript-->
+
+```js
+const App = () => {
+  // ⚡️ compile error! Missing properties
+  return <AppContext.Provider value={ {
+    lang: 'de', 
+  } }>
+    <Header/>
+  </AppContext.Provider>
+}
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+Non preoccuparti, c'è anche il modo di andare a utilizzare solo le proprietà di cui hai bisogno utilizzando l'helper <a href="https://danielecarta-docs.netlify.app/docs/typescript-type#partial">Partial</a>:
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Typescript-->
+
+```js
+
+import React from 'react';
+
+// We define our type for the context properties right here
+type ContextProps = { 
+  authenticated: boolean,
+  lang: string,
+  theme: string
+};
+
+// we initialise them without default values, to make that happen, we
+// apply the Partial helper type.
+export const AppContext = 
+  React.createContext<Partial<ContextProps>>({});
+
+const Header = () => {
+  return <AppContext.Consumer>
+  {
+    ({authenticated}) => {
+      if(authenticated) {
+        return <h1>Logged in!</h1>
+      }
+      return <h1>You need to sign in</h1>
+    }
+  }
+  </AppContext.Consumer>
+}
+
+// Now, we can set only the properties we really need
+const App = () => {
+  return <AppContext.Provider value={ {
+    authenticated: true,
+  } }>
+    <Header/>
+  </AppContext.Provider>
+}
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
