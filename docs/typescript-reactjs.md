@@ -3,7 +3,7 @@ id: typescript-reactjs
 title: Typescript in ReactJS
 ---
 
-## Definire le Props
+## Props
 
 Esempio molto semplice per definire le Props di un functional component con Type
 
