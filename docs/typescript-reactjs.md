@@ -397,3 +397,65 @@ const App = () => {
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+## Style e CSS
+
+Ti consiglio di guardarti questo pacchetto: <a target="_blank" href="https://www.npmjs.com/package/csstype">CSSType</a>.
+
+### Stile in linea
+
+Per definire lo stile in linea, vediamo subito un esempio:
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Typescript-->
+
+```js
+import CSS from 'csstype';
+
+const h1Styles: CSS.Properties = {
+  backgroundColor: 'rgba(255, 255, 255, 0.85)',
+  position: 'absolute',
+  right: 0,
+  bottom: '2rem',
+  padding: '0.5rem',
+  fontFamily: 'sans-serif',
+  fontSize: '1.5rem',
+  boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'
+};
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+Come avrai notato, abbiamo importato il pacchetto csstype.
+
+Per applicare il tuo stile in linea:
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Typescript-->
+
+```js
+export function Heading({ title } : { title: string} ) {
+  return <h1 style={h1Styles}>{title}</h1>;
+}
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### Styled Components
+
+Per utilizzare Styled Components con Typescript, è necessario installare la seguente dipendenza:
+
+```js
+npm install @types/styled-components
+```
+
+Una volta installata, potremo già iniziare a utilizzarlo:
+
+```js
+import styled from "styled-components";
+
+export const Heading = styled.h1`
+  font-weight: normal;
+  font-style: italic;
+`;
+```
