@@ -116,7 +116,7 @@ Il valore di return viene definito da :number dopo (numero: number).
 
 ## Extends
 
-Nell'esempio proprietà variabili abbiamo visto come poter estendere un interfaccia con qualsiasi altra proprietà. Questa cosa non è sicura al 100%, perché rischiamo di non sapere con precisione quali dati riceveremo.
+Nell'esempio <a href="https://danielecarta-docs.netlify.app/docs/typescript-interface#propriet%C3%A0-variabili">proprietà variabili</a> abbiamo visto come poter estendere un interfaccia con qualsiasi altra proprietà. Questa cosa non è sicura al 100%, perché rischiamo di non sapere con precisione quali dati riceveremo.
 
 Un metodo più sicuro è quello di utilizzare extends.
 
