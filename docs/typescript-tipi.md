@@ -157,3 +157,6 @@ function log(messaggio): void {
   console.log(messaggio);
 }
 ```
+
+## Asserzioni
+
