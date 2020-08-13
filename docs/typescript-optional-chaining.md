@@ -9,6 +9,7 @@ Se lavori in Javascript, sicuramente ti sarai imbattuto in oggetti con vari live
 
 Facciamo un esempio pratico:
 
+```js
 // versione 1
 const bigObject = {
   // ...
@@ -28,3 +29,4 @@ const bigObject = {
     // Nothing here   
   }
 };
+```
