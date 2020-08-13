@@ -354,7 +354,7 @@ const h1Styles: CSS.Properties = {
 Come avrai notato, abbiamo importato il pacchetto csstype.
 Funzionano molto bene anche i suggerimenti.
 
-<img src="https://danielecarta-docs.netlify.app/img/autocompletion-on-properties.png" />
+<img style="margin: 0" src="https://danielecarta-docs.netlify.app/img/autocompletion-on-properties.png" />
 
 Per applicare il tuo stile in linea:
 
@@ -382,3 +382,21 @@ export const Heading = styled.h1`
   font-style: italic;
 `;
 ```
+
+Se avessimo invece necessità di passare delle props al nostro stile:
+
+```js
+type FlexProps = {
+  direction?: 'row' | 'column',
+}
+
+export const Flex = styled.div<FlexProps>`
+    display: flex;
+    flex-direction: ${props => props.direction};
+`;
+
+// use it like that:
+const el = <Flex direction="row"></Flex>
+```
+
+Se lavori con VS Code e Styled Components puoi utilizzare quest'estensione: <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components">Download</a>
