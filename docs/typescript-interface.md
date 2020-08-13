@@ -120,6 +120,7 @@ Nell'esempio proprietà variabili abbiamo visto come poter estendere un interfac
 
 Un metodo più sicuro è quello di utilizzare extends.
 
+```ts
 interface IPerson {
     name: string;
     gender: string;
@@ -134,6 +135,7 @@ let empObj:IEmployee = {
     name:"Bill",
     gender:"Male"
 }
+```
 
 In questo esempio, l'interfaccia IEmployee avrà una sola proprietà "empCode" oltre però a tutte le proprietà di IPerson.
 Quindi possiamo dire che IEmployee è una versione estesa di IPerson.
