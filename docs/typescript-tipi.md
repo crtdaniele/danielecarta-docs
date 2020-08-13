@@ -160,3 +160,32 @@ function log(messaggio): void {
 
 ## Asserzioni
 
+Dopo aver visto il tipo <a href="https://danielecarta-docs.netlify.app/docs/typescript-tipi#any">Any</a> è utile tenere in considerazione che è possibile sovrascrivere il tipo (non ha nessun effetto in runtime). Esistono due modi:
+
+```js
+function baz(message: any): void {
+  // message: any
+  const msg = (<string>message); // msg: string 
+  msg.toUpperCase();
+}
+```
+
+Oppure con la keyword as:
+
+```js
+function baz(message: any): void {
+  // message: any
+  const msg = (message as string); // msg: string 
+  msg.toUpperCase();
+}
+```
+
+## Tipo non Nullo
+
+Può esservi capitato di vedere linee di codice tipo questa:
+
+```js
+console.log(nome!.length);
+```
+
+L'operatore ! prima di length serve per togliere i tipi Null e Undefined dai possibili tipi di una variabile. In questo modo in fase di compilazione non avremo più il classico errore: Object is possibly 'null'.
