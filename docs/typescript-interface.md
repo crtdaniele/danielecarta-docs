@@ -81,3 +81,11 @@ In questo esempio, ho creato un Interface chiamata User che avrà due proprietà
 ```ts
 [props: string]: any
 ```
+
+Questo ci permettà di andare a dichiarare degli oggetti di questo tipo:
+
+```ts
+const myUser = {
+  nome: ""
+};
+```
