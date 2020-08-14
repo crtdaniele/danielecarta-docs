@@ -82,4 +82,13 @@ interface SuperUser extends User {
 }
 ```
 
+C'è da far presente una cosa però, quando si va a unire un Interface non lo si può fare inline come con Type. Vediamo un esempio:
+
+```ts
+function(_: A & B) {}
+//...
+interface Z extends A, B {}
+function(_: Z) {}
+```
+
 https://dev.to/reyronald/typescript-types-or-interfaces-for-react-component-props-1408
