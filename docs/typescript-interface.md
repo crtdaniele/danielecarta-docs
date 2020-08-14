@@ -141,3 +141,24 @@ In questo esempio, l'interfaccia IEmployee avrà una sola proprietà "empCode" o
 Quindi possiamo dire che IEmployee è una versione estesa di IPerson.
 
 Nulla ci viene all'interno del nostro codice di utilizzare IPerson oppure IEmployee, utilizzeremo una delle due in base alle nostre necessità.
+
+## Modificare Interface già dichiarate
+
+Con Interface, abbiamo la possibilità di andare a "riaprire" il loro contenuto dichiarandole nuovamente:
+
+```ts
+interface IUser {
+  firstName: string
+  lastName: string
+}
+
+interface IUser {
+  age: number
+}
+
+const user: IUser = {
+  firstName: 'Jon',
+  lastName: 'Doe',
+  age: 25,
+}
+```
