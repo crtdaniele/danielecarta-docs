@@ -3,6 +3,6 @@
     "Home": ["home"],
     "ReactJS": ["reactjs", "reactjs-v17"],
     "Redux": ["redux"],
-    "Typescript": ["typescript", "typescript-tipi", "typescript-interface", "typescript-type", "typescript-optinal-chaining", "typescript-reactjs", "typescript-functioncomponent"]
+    "Typescript": ["typescript", "typescript-tipi", "typescript-interface", "typescript-type", "typescript-funzioni", "typescript-optinal-chaining", "typescript-reactjs", "typescript-functioncomponent"]
   }
 }
