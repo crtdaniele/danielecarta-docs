@@ -29,7 +29,7 @@ In questo caso stiamo dicendo che la nostra funzione ritornerà una stringa.
 
 ## Parametri opzionali
 
-Anche nelle funzioni è possibile passare dei parametri opzionali sempre con l'operatore ? (ti consiglio di leggere questa pagina sull'optional chaining).
+Anche nelle funzioni è possibile passare dei parametri opzionali sempre con l'operatore ? (ti consiglio di leggere questa pagina sull'<a href="https://danielecarta-docs.netlify.app/docs/typescript-optional-chaining">optional chaining</a>).
 
 ```ts
 const myFunction = (a: string, b?: string) => {
@@ -37,3 +37,19 @@ const myFunction = (a: string, b?: string) => {
     console.log(b);
 }
 ```
+
+In questo modo il parametro b sarà opzionale quindi potremo chiamare la funzione in questo modo:
+
+```ts
+myFunction("parametro 1");
+// result: 
+   parametro 1
+   undefined
+   
+myFunction("parametro 1", "parametro 2");
+// result: 
+   parametro 1
+   parametro 2
+```
+
+Nota bene una cosa, i parametri opzionali NON possono essere dichiarati prima di parametri obbligatori.
