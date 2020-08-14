@@ -3,7 +3,7 @@ id: typescript-type-vs-interface
 title: Type vs Interface
 ---
 
-In questo articolo vorrei mostrarvi le differenze principali tra <a href="https://danielecarta-docs.netlify.app/docs/typescript-interface">Interface</a> e <a href="https://danielecarta-docs.netlify.app/docs/typescript-type">Type</a>. Sicuramente ti sarai già imbattuto nella domanda (quando lavoro in ReactJS con Typescript, come definisco le Props di un componente?).
+In questo articolo vorrei mostrarvi le differenze principali tra <a href="https://danielecarta-docs.netlify.app/docs/typescript-interface">Interface</a> e <a href="https://danielecarta-docs.netlify.app/docs/typescript-type">Type</a>. Sicuramente ti sarai già imbattuto nella domanda (quando lavoro in <a href="https://danielecarta-docs.netlify.app/docs/typescript-reactjs">ReactJS con Typescript</a>, come definisco le Props di un componente?).
 
 ## Oggetto base
 
