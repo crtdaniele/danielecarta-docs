@@ -22,3 +22,7 @@ const myFunction = (a: string): string => {
 }
 
 In questo caso stiamo dicendo che la nostra funzione ritornerà una stringa.
+
+## Parametri opzionali
+
+Anche nelle funzioni è possibile passare dei parametri opzionali sempre con l'operatore ? (ti consiglio di leggere questa pagina sull'optional chaining).
