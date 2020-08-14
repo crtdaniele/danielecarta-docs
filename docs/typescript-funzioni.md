@@ -1,3 +1,8 @@
+---
+id: typescript-funzioni
+title: Funzioni
+---
+
 ## Tipizzazione
 
 Anche per le funzioni è possibile tipizzare i vari parametri passati:
