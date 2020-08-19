@@ -66,6 +66,42 @@ I due esempi sono praticamente uguali, con la differenza che nel secondo esempio
 { title, paragraph, children } 
 ```
 
+### Passare una funzione a un Componente Children
+
+In questo esempio, passeremo una funzione definita nel componente parent a un componente children. Quindi la funzione verrà invocata all'interno del componente Children.
+
+```js
+// Parent
+const [data, setData] = useState("Questo è un testo di prova");
+
+const handleUpdate = () => {
+  setData("Test Riuscito");
+}
+
+return (
+  <div className="App">
+    <Test update={handleUpdate} data={data}></Test>
+  </div>
+);
+
+// Children
+interface Props {
+    data: string,
+    update: () => void
+}
+
+const Test: React.FC<Props> = ({data, update}) => {
+
+    return (
+        <div>
+            <span onClick={update}>Clicca e aggiorna lo stato</span>
+            <br />
+            {data}
+        </div>
+    )
+}
+```
+
 ## Children
 
 Come accedere ai componenti children con i FunctionComponent
