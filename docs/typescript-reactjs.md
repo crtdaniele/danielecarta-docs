@@ -3,6 +3,8 @@ id: typescript-reactjs
 title: Typescript in ReactJS
 ---
 
+<a href="https://github.com/typescript-cheatsheets/react"><strong>React+TypeScript Cheatsheets</strong></a>
+
 ## Props
 
 Esempio molto semplice per definire le Props di un functional component con Type
