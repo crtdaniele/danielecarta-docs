@@ -9,6 +9,8 @@
       "typescript-interface", 
       "typescript-type", 
       "typescript-funzioni", 
+      "typescript-overloading", 
+      "typescript-generics", 
       "typescript-optional-chaining", 
       "typescript-reactjs", 
       "typescript-functioncomponent"
