@@ -58,3 +58,42 @@ const printFunc: GenericPrintFn<string> = printType;
 
 printFunc('ciao'); // string
 ````
+
+## Classi Generiche
+
+Possiamo definire anche delle classi generiche, senza definire il tipo di dato dei vari parametri della classe:
+
+````ts
+class Pair<T, U> {
+  private firstElement: T;
+  private secondElement: U;
+
+  constructor(firstElement: T, secondElement: U) {
+    this.firstElement = firstElement;
+    this.secondElement = secondElement;
+  }
+
+  public getFirstElement(): T {
+    return this.firstElement;
+  }
+
+  public getSecondElement(): U {
+    return this.secondElement;
+  }
+
+  public getPair(): string {
+    return `${this.firstElement} - ${this.secondElement}`;
+  }
+}
+
+const cars = [
+  new Automobile('McLaren', 'P1'),
+  new Automobile('Ferrari', 'Portofino'),
+  new Automobile('Rolls-Royce', 'Wraith')
+];
+
+const firstPair = new Pair<number, string>(3, 'Ayrton Senna');
+const secondPair = new Pair<string, Automobile[]>('Lisa', cars);
+const thirdPair = new Pair<string, string>('Australia', 'Canberra');
+const fourthPair = new Pair<string, string>('ciao', 'hello');
+````
