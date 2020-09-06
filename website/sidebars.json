@@ -2,17 +2,18 @@
   "docs": {
     "Home": ["home"],
     "ReactJS": ["reactjs", "reactjs-v17"],
+    "React Native": ["react-native", "react-native-componenti-base"],
     "Redux": ["redux"],
     "Typescript": [
-      "typescript", 
-      "typescript-tipi", 
-      "typescript-interface", 
-      "typescript-type", 
-      "typescript-funzioni", 
-      "typescript-overloading", 
-      "typescript-generics", 
-      "typescript-optional-chaining", 
-      "typescript-reactjs", 
+      "typescript",
+      "typescript-tipi",
+      "typescript-interface",
+      "typescript-type",
+      "typescript-funzioni",
+      "typescript-overloading",
+      "typescript-generics",
+      "typescript-optional-chaining",
+      "typescript-reactjs",
       "typescript-functioncomponent"
     ],
     "VSCode": ["migliori-plugin"]
