@@ -15,7 +15,13 @@ https://marketplace.visualstudio.com/items?itemName=EQuimper.react-native-react-
 
 ### Prettier - Code formatter
 
-https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+To install Prettier on VS Code, go to:
+
+File -> Preferences -> Settings
+
+Now, search "formatonsave" and flag this option.
+
+<a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Download Prettier</a>
 
 ### Material Icon Theme
 
