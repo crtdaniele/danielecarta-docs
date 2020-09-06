@@ -14,6 +14,7 @@
       "typescript-optional-chaining", 
       "typescript-reactjs", 
       "typescript-functioncomponent"
-    ]
+    ],
+    "VSCode": ["migliori-plugin"]
   }
 }
