@@ -2,7 +2,11 @@
   "docs": {
     "Home": ["home"],
     "ReactJS": ["reactjs", "reactjs-v17"],
-    "React Native": ["react-native", "react-native-componenti-base"],
+    "React Native": [
+      "react-native",
+      "react-native-componenti-base",
+      "react-native-expo-vs-react-native-cli"
+    ],
     "Redux": ["redux"],
     "Typescript": [
       "typescript",
