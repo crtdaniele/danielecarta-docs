@@ -22,3 +22,4 @@ React Native si basa su Flex, quindi qui possiamo trovare la guida ufficiale su 
 Alcuni tra i corsi più interessanti che ho trovato in rete:
 
 - <a target="_blank" href="https://universapp.tech/p/react-native/?product_id=1945036&coupon_code=SCONTO50">React Native by Universapp (ITA)</a>
+- <a target="_blank" href="https://www.youtube.com/watch?v=wyznjlLP1y4&list=PLDr7Z-9oq6560_-aQixfnksIAIRMN7zKC">Coding with Curry (ENG)</a>
