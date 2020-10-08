@@ -1,13 +1,18 @@
 {
   "docs": {
     "Home": ["home"],
-    "ReactJS": ["reactjs", "reactjs-v17"],
+    "ReactJS": [
+      "reactjs",
+      "reactjs-v17",
+      "reactjs-top-librerie",
+      "reactjs-corsi"
+    ],
     "React Native": [
       "react-native",
       "react-native-componenti-base",
       "react-native-expo-vs-react-native-cli"
     ],
-    "Redux": ["redux"],
+    "Redux": ["redux", "redux-saga", "redux-corsi"],
     "Typescript": [
       "typescript",
       "typescript-tipi",
